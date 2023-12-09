@@ -23,7 +23,7 @@ impl Game {
     }
 }
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub struct CubeSet {
     pub red: u32,
     pub green: u32,
@@ -95,16 +95,6 @@ impl Round {
     }
 }
 
-impl Default for CubeSet {
-    fn default() -> Self {
-        Self {
-            red: 0,
-            green: 0,
-            blue: 0,
-        }
-    }
-}
-
 impl FromStr for CubeColor {
     type Err = anyhow::Error;
 
@@ -124,7 +114,7 @@ impl FromStr for ColorDraw {
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         // "1 red"
         let (qty, color) = s
-            .split_once(" ")
+            .split_once(' ')
             .context("couldn't split ColorDraw string")?;
 
         Ok(Self {
