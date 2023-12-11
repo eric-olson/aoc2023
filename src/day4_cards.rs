@@ -57,7 +57,7 @@ impl FromStr for Card {
         let (_card, all_numbers) = s.split_once(':').context("splitting card from numbers")?;
 
         let (numbers, winners) = all_numbers
-            .split_once("|")
+            .split_once('|')
             .context("splitting numbers from winners")?;
 
         for number in numbers.split_ascii_whitespace() {
