@@ -55,12 +55,7 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-    Some(
-        input
-            .lines()
-            .map(extract_text_numbers)
-            .sum(),
-    )
+    Some(input.lines().map(extract_text_numbers).sum())
 }
 
 #[cfg(test)]
@@ -76,10 +71,7 @@ mod tests {
 
     #[test]
     fn test_extract_numbers() {
-        assert_eq!(
-            extract_text_numbers("234eightsevensix8"),
-            28
-        );
+        assert_eq!(extract_text_numbers("234eightsevensix8"), 28);
         assert_eq!(extract_text_numbers("1oneasdfasdf"), 11);
         assert_eq!(extract_text_numbers("oneight"), 18);
     }

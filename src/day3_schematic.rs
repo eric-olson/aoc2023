@@ -60,7 +60,7 @@ impl Number {
         false
     }
 
-    fn mark_gears(&self, gears: &mut[Vec<GearMarker>]) {
+    fn mark_gears(&self, gears: &mut [Vec<GearMarker>]) {
         // create bounding box around number
         let top = self.y.saturating_sub(1);
         let left = self.x_start.saturating_sub(1);
@@ -72,7 +72,6 @@ impl Number {
                 gears[y][x].visit_gear(self.value);
             }
         }
-
     }
 }
 

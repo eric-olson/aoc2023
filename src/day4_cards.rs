@@ -13,7 +13,7 @@ impl Card {
     pub fn point_value(&self) -> u32 {
         match self.matches() {
             0 => 0,
-            n => 2u32.pow(n - 1)
+            n => 2u32.pow(n - 1),
         }
     }
 

@@ -157,7 +157,7 @@ impl Input {
             let input_ranges = mem::take(&mut ranges);
 
             for range in input_ranges {
-                ranges.extend(range.apply_mapping_batch(&mapping_batch));
+                ranges.extend(range.apply_mapping_batch(mapping_batch));
             }
         }
 
@@ -201,7 +201,7 @@ impl FromStr for Input {
         let (seed_line, remainder) = s.split_once('\n').unwrap();
 
         let seeds = seed_line
-            .split_once(":")
+            .split_once(':')
             .unwrap()
             .1
             .split_ascii_whitespace()
