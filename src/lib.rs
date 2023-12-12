@@ -8,3 +8,4 @@ pub mod day3_schematic;
 pub mod day4_cards;
 pub mod day5_almanac;
 pub mod day6_boats;
+pub mod day7_cards;

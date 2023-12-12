@@ -64,7 +64,5 @@ pub fn parse_day6_input_pt2(input: &str) -> Race {
     let time = time.replace([' ', '\n'], "").parse().unwrap();
     let distance = distance.replace([' ', '\n'], "").parse().unwrap();
 
-    println!("{time}, {distance}");
-
     Race { time, distance }
 }
