@@ -10,3 +10,4 @@ pub mod day5_almanac;
 pub mod day6_boats;
 pub mod day7_cards;
 pub mod day8_maps;
+pub mod day9_oasis;
